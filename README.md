@@ -1,7 +1,9 @@
 # eCARD
-An Android Application to make A Card to wish someone.
-It basically have Sharing features ,Saving to Gallery features. Go through the code, You will understand if you are an Android developer. How I did all.
-Screenshot of App Attached. Login Sign page is made using SQLite.
+An android application to make generate e-Card to wish digitally.
+App Features:
+  1. User can select any image from galary.
+  2. User can write any custome message.(<=300 words).
+  3. User can save the image after processing or also can share directly through Whatsapp, facebook or any sharing apps.
 
 ![screenshot_2018-02-12-21-38-51-971_com example imalok project](https://user-images.githubusercontent.com/26534910/36107084-0d3b2e96-103f-11e8-8061-0a0c0ac7f7ad.png)
 ![screenshot_2018-02-12-21-38-58-842_com example imalok project](https://user-images.githubusercontent.com/26534910/36107087-0dc5dbcc-103f-11e8-867c-1ad1d477324c.png)
