@@ -1,7 +1,6 @@
 # eCARD
 An android application to make generate e-Card to wish digitally.
 
-App Link:  https://drive.google.com/open?id=1YVVrM3qFghrZBYbse15kT2c_gYcQLUux
 
 
 App Features:
