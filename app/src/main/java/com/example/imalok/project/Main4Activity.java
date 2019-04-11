@@ -23,7 +23,8 @@ import java.io.IOException;
 
 public class Main4Activity extends AppCompatActivity
 {
-    String dirpath,currentImage;
+    final String dirpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString();
+    final String currentImage = "eCARD"+ System.currentTimeMillis()+".jpeg";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -62,7 +63,7 @@ public class Main4Activity extends AppCompatActivity
     }
     public void store(Bitmap bm, String filename)
     {
-        dirpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString();
+        //dirpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString();
         File dir = new File(dirpath);
         if (!dir.exists())
         {
@@ -91,7 +92,7 @@ public class Main4Activity extends AppCompatActivity
     {
         View content = findViewById(R.id.lay1);
         Bitmap bitmap = getScreenshot(content);
-        currentImage = "eCARD"+ System.currentTimeMillis()+".jpeg";
+
         store(bitmap,currentImage);
     }
     @Override
@@ -129,11 +130,12 @@ public class Main4Activity extends AppCompatActivity
         if (item.getItemId()==R.id.share)
         {
             String filename = currentImage;
-            String path = /**"/mnt/sdcard/"*/dirpath + filename;
+            String path = /**"/mnt/sdcard/"*/dirpath +"/"+ filename;
             File f = new File(path);  //
             Uri imageUri = Uri.fromFile(f);
             shareImage(imageUri);
-            Toast.makeText(getApplicationContext(),""+currentImage +dirpath,Toast.LENGTH_LONG).show();
+            Log.d("DirPath",path);
+            //Toast.makeText(getApplicationContext(),path,Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
